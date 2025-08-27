@@ -1,3 +1,8 @@
+
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+
 # Compteur Simple
 
 Ce projet propose un compteur interactif en JavaScript, HTML et CSS. Il permet d'incrémenter, de décrémenter, d'ajouter ou de soustraire 1 ou 5 à la valeur du compteur, ainsi que de le réinitialiser à zéro.
