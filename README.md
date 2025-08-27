@@ -11,37 +11,42 @@ Ce projet propose un compteur interactif en JavaScript, HTML et CSS. Il permet d
 ## Explications du code principal (`script.js`)
 
 ```js
-let count = 0; // Valeur initiale du compteur
-const counter = document.getElementById("counter"); // Élément HTML affichant la valeur
+let count = 0; // Variable pour stocker la valeur du compteur (initialisée à 0)
+const counter = document.querySelector("#counter"); // Récupère l'élément HTML qui affiche le compteur
 
-// Incrémente de 1
-document.getElementById("plus").addEventListener("click", () => {
-  count++;
-  updateDisplay();
+// Ajoute 1 au compteur quand on clique sur le bouton "plus"
+document.querySelector("#plus").addEventListener("click", () => {
+  count++; // Incrémente le compteur de 1
+  updateDisplay(); // Met à jour l'affichage
 });
-// Décrémente de 1
-document.getElementById("moins").addEventListener("click", () => {
-  count--;
-  updateDisplay();
+
+// Soustrait 1 au compteur quand on clique sur le bouton "moins"
+document.querySelector("#moins").addEventListener("click", () => {
+  count--; // Décrémente le compteur de 1
+  updateDisplay(); // Met à jour l'affichage
 });
-// Incrémente de 5
-document.getElementById("plus5").addEventListener("click", () => {
-  count += 5;
-  updateDisplay();
+
+// Ajoute 5 au compteur quand on clique sur le bouton "plus5"
+document.querySelector("#plus5").addEventListener("click", () => {
+  count += 5; // Incrémente le compteur de 5
+  updateDisplay(); // Met à jour l'affichage
 });
-// Décrémente de 5
-document.getElementById("moins5").addEventListener("click", () => {
-  count -= 5;
-  updateDisplay();
+
+// Soustrait 5 au compteur quand on clique sur le bouton "moins5"
+document.querySelector("#moins5").addEventListener("click", () => {
+  count -= 5; // Décrémente le compteur de 5
+  updateDisplay(); // Met à jour l'affichage
 });
-// Réinitialise à 0
-document.getElementById("reset").addEventListener("click", () => {
-  count = 0;
-  updateDisplay();
+
+// Réinitialise le compteur à 0 quand on clique sur le bouton "reset"
+document.querySelector("#reset").addEventListener("click", () => {
+  count = 0; // Remet le compteur à 0
+  updateDisplay(); // Met à jour l'affichage
 });
-// Met à jour l'affichage
+
+// Fonction pour mettre à jour l'affichage du compteur
 function updateDisplay() {
-  counter.textContent = count;
+  counter.textContent = "Compteur : " + count; // Affiche le texte souhaité
 }
 ```
 
@@ -59,13 +64,13 @@ function updateDisplay() {
 
 1. Ouvrez le fichier `index.html` dans un navigateur web.
 2. Cliquez sur les boutons pour modifier la valeur du compteur selon vos besoins.
-3. Le compteur s'affiche et se met à jour instantanément.
+3. Le compteur s'affiche sous la forme "Compteur : X" et se met à jour instantanément.
 
 ## Exemple d'interface HTML
 
 ```html
 <div>
-  <span id="counter">0</span>
+  <span id="counter">Compteur : 0</span>
   <button id="plus">+1</button>
   <button id="moins">-1</button>
   <button id="plus5">+5</button>

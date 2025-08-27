@@ -17,40 +17,40 @@
 
 
 let count = 0; // Variable pour stocker la valeur du compteur (initialisée à 0)
-const counter = document.getElementById("counter"); // Récupère l'élément HTML qui affiche le compteur
+const counter = document.querySelector("#counter"); // Récupère l'élément HTML qui affiche le compteur
 
 // Ajoute 1 au compteur quand on clique sur le bouton "plus"
-document.getElementById("plus").addEventListener("click", () => {
+document.querySelector("#plus").addEventListener("click", () => {
     count++; // Incrémente le compteur de 1
     updateDisplay(); // Met à jour l'affichage
 });
 
 // Soustrait 1 au compteur quand on clique sur le bouton "moins"
-document.getElementById("moins").addEventListener("click", () => {
+document.querySelector("#moins").addEventListener("click", () => {
     count--; // Décrémente le compteur de 1
     updateDisplay(); // Met à jour l'affichage
 });
 
 // Ajoute 5 au compteur quand on clique sur le bouton "plus5"
-document.getElementById("plus5").addEventListener("click", () => {
+document.querySelector("#plus5").addEventListener("click", () => {
     count += 5; // Incrémente le compteur de 5
     updateDisplay(); // Met à jour l'affichage
 });
 
 // Soustrait 5 au compteur quand on clique sur le bouton "moins5"
-document.getElementById("moins5").addEventListener("click", () => {
+document.querySelector("#moins5").addEventListener("click", () => {
     count -= 5; // Décrémente le compteur de 5
     updateDisplay(); // Met à jour l'affichage
 });
 
 // Réinitialise le compteur à 0 quand on clique sur le bouton "reset"
-document.getElementById("reset").addEventListener("click", () => {
+document.querySelector("#reset").addEventListener("click", () => {
     count = 0; // Remet le compteur à 0
     updateDisplay(); // Met à jour l'affichage
 });
 
 // Fonction pour mettre à jour l'affichage du compteur
 function updateDisplay() {
-    counter.textContent = count; // Affiche la valeur actuelle du compteur dans l'élément HTML
+    counter.textContent = "Compteur : " + count; // Affiche le texte souhaité
 }
 
