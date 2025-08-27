@@ -18,6 +18,7 @@
 
 let count = 0; // Variable pour stocker la valeur du compteur (initialisée à 0)
 const counter = document.querySelector("#counter"); // Récupère l'élément HTML qui affiche le compteur
+const counterDiv = document.querySelector('[data-counter]'); // Récupère l'élément HTML qui affiche le compteur
 
 // Ajoute 1 au compteur quand on clique sur le bouton "plus"
 document.querySelector("#plus").addEventListener("click", () => {
@@ -51,6 +52,6 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 // Fonction pour mettre à jour l'affichage du compteur
 function updateDisplay() {
-    counter.textContent = "Compteur : " + count; // Affiche le texte souhaité
+    counterDiv.textContent = "Compteur : " + count; // Affiche le texte souhaité
 }
 
