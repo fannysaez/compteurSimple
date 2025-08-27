@@ -1,0 +1,21 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Police sans-serif pour le texte */
+    text-align: center;             /* Centre le contenu horizontalement */
+    margin-top: 50px;               /* Espace en haut de la page */
+}
+
+#counter {
+    font-size: 1.8em;                 /* Grande taille de police pour le compteur */
+    margin: 20px;     
+    margin-top: 150px;               /* Espace en haut de la page */    
+}
+
+button {
+    padding: 10px 20px;             /* Espace intérieur du bouton */
+    margin: 5px;                    /* Marge autour du bouton */
+    font-size: 1em;                 /* Taille de police du bouton */
+    cursor: pointer;                /* Curseur pointeur au survol */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(43, 162, 226);
+    color: white;
+}
