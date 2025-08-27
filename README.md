@@ -12,7 +12,7 @@ Ce projet propose un compteur interactif en JavaScript, HTML et CSS. Il permet d
 
 ```js
 let count = 0; // Variable pour stocker la valeur du compteur (initialisée à 0)
-const counter = document.querySelector("#counter"); // Récupère l'élément HTML qui affiche le compteur
+const counterDiv = document.querySelector("[data-counter]"); // Récupère l'élément HTML qui affiche le compteur
 
 // Ajoute 1 au compteur quand on clique sur le bouton "plus"
 document.querySelector("#plus").addEventListener("click", () => {
@@ -46,7 +46,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 // Fonction pour mettre à jour l'affichage du compteur
 function updateDisplay() {
-  counter.textContent = "Compteur : " + count; // Affiche le texte souhaité
+  counterDiv.textContent = "Compteur : " + count; // Affiche le texte souhaité
 }
 ```
 
@@ -54,7 +54,8 @@ function updateDisplay() {
 
 - **Incrémenter** : augmenter la valeur d'une variable (ex : +1 ou +5)
 - **Décrémenter** : diminuer la valeur d'une variable (ex : -1 ou -5)
-- **getElementById** : méthode JavaScript pour récupérer un élément HTML par son id
+- **data-counter** : attribut HTML personnalisé (data attribute) utilisé pour cibler l'élément du compteur dans le DOM. Permet de sélectionner l'élément sans utiliser d'id ou de classe.
+- **querySelector('[data-counter]')** : méthode JavaScript pour récupérer un élément HTML par un attribut personnalisé
 - **addEventListener** : attache une fonction à un événement (ex : clic sur un bouton)
 - **updateDisplay** : fonction qui met à jour l'affichage du compteur
 - **textContent** : propriété qui permet de modifier le texte d'un élément HTML
@@ -64,19 +65,17 @@ function updateDisplay() {
 
 1. Ouvrez le fichier `index.html` dans un navigateur web.
 2. Cliquez sur les boutons pour modifier la valeur du compteur selon vos besoins.
-3. Le compteur s'affiche sous la forme "Compteur : X" et se met à jour instantanément.
+3. Le compteur s'affiche sous la forme "Compteur : X" et se met à jour instantanément. Le texte "Compteur :" reste toujours visible devant la valeur.
 
 ## Exemple d'interface HTML
 
 ```html
-<div>
-  <span id="counter">Compteur : 0</span>
-  <button id="plus">+1</button>
-  <button id="moins">-1</button>
-  <button id="plus5">+5</button>
-  <button id="moins5">-5</button>
-  <button id="reset">Reset</button>
-</div>
+<div data-counter>Compteur : 0</div>
+<button id="plus">+1</button>
+<button id="moins">-1</button>
+<button id="plus5">+5</button>
+<button id="moins5">-5</button>
+<button id="reset">Reset</button>
 ```
 
 ## Personnalisation
